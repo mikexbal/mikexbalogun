@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+
+h1 {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+h3, p {
+    font-family: 'Funnel Sans', sans-serif;
+}
+
