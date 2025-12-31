@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth duration-1000">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mike Balogun</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Lexend+Deca:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white">
+    <nav
+      class="navbar flex flex-row flex-wrap justify-between p-5 font-[Lexend_Deca]"
+    >
+      <div class="nav-start">
+        <h1 class="text-2xl">
+          <a href="">Mike Balogun</a
+          ><span class="text-blue-500 text-3xl">.</span>
+        </h1>
+      </div>
+
+      <div class="nav-end">
+        <ul class="flex flex-row text-2xl list-none">
+          <li><a class="mr-4" href="#projects-section">Projects</a></li>
+          <li><a class="mr-4" href="">Experience</a></li>
+          <li><a class="mr-4" href="">Education</a></li>
+          <li><a class="mr-4" href="">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="hero-section" class="h-screen">
+      <div
+        class="flex flex-col text-center mx-auto justify-center h-[80vh] max-w-3xl"
+      >
+        <h3
+          class="text-4xl mb-2 text-slate-500 font-semibold text-shadow-sm font-['Funnel_Sans']"
+        >
+          Software Engineer
+        </h3>
+        <h1 class="text-9xl text-shadow-lg font-['Lexend_Deca']">
+          Hi, I'm <span id="name" class="text-blue-500"></span>.
+        </h1>
+        <h3
+          class="text-2xl mt-3 text-slate-500 font-semibold text-shadow-sm font-['Funnel_Sans']"
+        >
+          A passionate developer crafting end-to-end solutions. I create
+          seamless experiences from frontend to backend.
+        </h3>
+
+        <div class="mt-5">
+          <button
+            class="text-shadow-lg bg-blue-500 rounded-xl text-2xl pt-[5px] pb-[6px] pl-[30px] pr-[30px] font-light mr-[15px] hover:cursor-pointer text-white transition-transform hover:scale-115 duration-1000"
+          >
+            View Projects
+          </button>
+
+          <button
+            class="text-shadow-lg border-2 border-slate-300 rounded-xl text-2xl pt-[5px] pb-[6px] pl-[15px] pr-[15px] font-light hover:cursor-pointer transition-transform hover:scale-115 duration-1000"
+            onclick=""
+          >
+            Get in Touch
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects-section" class="bg-slate-100 h-screen">
+      <div class="flex flex-col p-[60px]">
+        <h1 class="text-md mb-2 font-light text-blue-500">PROJECTS.</h1>
+        <h3 class="text-4xl font-semibold mb-3">Featured Projects</h3>
+        <div class="bg-blue-500 h-[3px] w-[55px] rounded-full"></div>
+
+        <div class="projects-container mt-[50px] flex flex-col mx-auto">
+          <div class="project-card">
+            <div
+              class="border-1 border-slate-300/80 rounded-md bg-white max-w-[800px] min-h-48 p-[20px] text-shadow-xs"
+            >
+              <h1 class="text-xl font-semibold mb-1">Project Name</h1>
+              <p class="mb-2 text-slate-500 text-lg font-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Necessitatibus sunt rem blanditiis fugit ut sit, laudantium
+                voluptatem sed beatae accusantium?
+              </p>
+              <div class="technologies-container">
+                <span
+                  class="inline-flex items-center rounded-full bg-blue-500/10 px-2 py-1 text-xs font-medium text-blue-500"
+                  >Badge</span
+                >
+              </div>
+              <div class="link-container flex flex-row mt-3 text-xl">
+                <a href><i class="bi bi-box-arrow-up-right mr-4"></i></a>
+
+                <a href><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
