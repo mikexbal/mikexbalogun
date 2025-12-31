@@ -15,9 +15,9 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-white">
+  <body class="bg-slate-100">
     <nav
-      class="navbar flex flex-row flex-wrap justify-between p-5 font-[Lexend_Deca]"
+      class="navbar flex flex-row flex-wrap justify-between p-5 font-[Lexend_Deca] sticky top-0  backdrop-blur-sm"
     >
       <div class="nav-start">
         <h1 class="text-2xl">
@@ -36,7 +36,7 @@
       </div>
     </nav>
 
-    <section id="hero-section" class="h-screen">
+    <section id="hero-section" class=" h-screen">
       <div
         class="flex flex-col text-center mx-auto justify-center h-[80vh] max-w-3xl"
       >
@@ -72,7 +72,7 @@
       </div>
     </section>
 
-    <section id="projects-section" class="bg-slate-100 h-screen">
+    <section id="projects-section" class="bg-slate-100 h-screen pt-7">
       <div class="flex flex-col p-[60px]">
         <h1 class="text-md mb-2 font-light text-blue-500">PROJECTS.</h1>
         <h3 class="text-4xl font-semibold mb-3">Featured Projects</h3>
@@ -103,6 +103,126 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="education-section" class="">
+      <div class="flex flex-col p-[60px]">
+        <h1 class="text-md mb-2 font-light text-blue-500">BACKGROUND.</h1>
+        <h3 class="text-4xl font-semibold mb-3">Education</h3>
+        <div class="bg-blue-500 h-[3px] w-[55px] rounded-full"></div>
+
+        <div class="education-container mt-[50px] mx-auto flex flex-row flex-wrap">
+          <div class="education-card mb-9 mr-9">
+            <div
+              class="border-1 border-slate-300/80 rounded-md bg-white max-w-[500px] min-h-40 min-w-[300px] p-[20px] text-shadow-xs"
+            >
+              <div class="flex flex-row">
+                <div class="left-card mr-3 mt-2">
+                  <i
+                    class="bi bi-mortarboard bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"
+                  ></i>
+                </div>
+                <div class="right-card">
+                  <h3 class="text-slate-500 font-thin">May 2026</h3>
+
+                  <h1 class="text-lg font-semibold mb-1">
+                    B.S. Information Science and Technology
+                  </h1>
+                  <h3 class="text-red-800 mb-3">Temple University</h3>
+                  <p class="text-slate-500 font-thin">
+                    Foundation in programming, databases, networking, and cloud
+                    computing.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div
+              class="border-1 border-slate-300/80 rounded-md bg-white max-w-[500px] min-h-[182px] min-w-[380px] p-[20px] text-shadow-xs"
+            >
+            <div class="flex flex-row">
+              <div class="left-card mr-3 mt-2">
+                <i class="bi bi-award bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"></i>
+                
+              </div>
+              <div class="right-card">
+                <h1 class="text-2xl font-semibold mb-1 mt-2">
+                  Certifications
+                </h1>
+              
+                
+              </div>
+              </div>
+          
+              
+          </div>
+          <ul class="list-disc mt-5 pl-6">
+            <li>Coming soon</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-section" class="h-screen">
+      <div class="flex flex-col p-[60px] justify-center items-center">
+        <h1 class="text-md mb-2 font-light text-blue-500">CONTACT.</h1>
+        <h3 class="text-4xl font-semibold mb-3">Get In Touch</h3>
+
+        <div class="conact-contianer  flex flex-row">
+          <div class="left-contact p-[50px]">
+
+            <div class="info-card w-xs flex flex-row border-1 border-slate-300/80 rounded-md bg-white p-5 mb-6"> 
+              <div class="mt-1 ">
+                <i class="bi bi-envelope bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"></i>
+
+              </div>
+              <div class="ml-4"><h3 class="text-sm text-slate-500 font-semibold">Email</h3>
+              <h1>mxbalogun@gmail.com</h1></div>
+            </div>
+            
+            <div class="info-card flex flex-row border-1 border-slate-300/80 rounded-md bg-white p-5"> 
+              <div class="mt-1">
+                <i class="bi bi-geo-alt bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"></i>
+
+              </div>
+              <div class="ml-4"><h3 class="text-sm text-slate-500 font-semibold">New York</h3>
+              <h1>New York City</h1></div>
+            </div>
+          </div>
+          <div class="right-contact bg-white w-[500px] border-1 border-slate-300 rounded-lg mt-9">
+            <form action="https://formspree.io/f/xlgeqala"
+            method="POST" class="flex flex-col p-8">
+              <div class="flex flex-row justify-between mb-3">
+                <div class="flex flex-col mr-4 text-md "><label for="name" class="font-semibold">Name</label>
+                  <input type="text" id="name" name="inquirer" class="border 1 border-slate-300 p-1 rounded-lg">
+                </div>
+                
+                <div class="flex flex-col text-md"><label for="name" class="font-semibold">Email</label>
+                  <input type="email" id="email" name="email" class="border 1 border-slate-300 p-1 rounded-lg">
+                </div>
+              </div>
+
+              <div class="flex flex-col text-md">
+                <label for="message" class="font-semibold">Message</label>
+                <textarea class="resize-y rounded-md border-1 border-slate-300 h-20 mb-4 p-1" name="text"></textarea>
+
+                <button type="submit"
+            class="text-shadow-lg bg-blue-500 rounded-xl text-lg pt-[5px] pb-[6px] pl-[30px] pr-[30px] font-light mr-[15px] hover:cursor-pointer text-white w-48">Send Message</button>
+          >
+          
+
+              </div>
+
+            </form>
+              
+
+          </div>
+        </div>
+
+      
+  
       </div>
     </section>
 
