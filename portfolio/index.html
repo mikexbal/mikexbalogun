@@ -56,18 +56,15 @@
         </h3>
 
         <div class="mt-5">
-          <button
-            class="text-shadow-lg bg-blue-500 rounded-xl text-2xl pt-[5px] pb-[6px] pl-[30px] pr-[30px] font-light mr-[15px] hover:cursor-pointer text-white transition-transform hover:scale-115 duration-1000"
+          <a href="#projects-section"><button
+            class="text-shadow-lg bg-blue-500 rounded-xl text-2xl pt-[5px] pb-[6px] pl-[30px] pr-[30px] font-light mr-[15px] hover:cursor-pointer text-white transition-transform hover:scale-115 duration-1000" href="#projects-section"
           >
             View Projects
-          </button>
+          </button></a>
 
-          <button
+          <a href="#contact-section"><button
             class="text-shadow-lg border-2 border-slate-300 rounded-xl text-2xl pt-[5px] pb-[6px] pl-[15px] pr-[15px] font-light hover:cursor-pointer transition-transform hover:scale-115 duration-1000"
-            onclick=""
-          >
-            Get in Touch
-          </button>
+          >Get in Touch</a>
         </div>
       </div>
     </section>
@@ -169,9 +166,9 @@
     <section id="contact-section" class="h-screen pt-7">
       <div class="flex flex-col p-[60px] justify-center items-center">
         <h1 class="text-md mb-2 font-light text-blue-500">CONTACT.</h1>
-        <h3 class="text-4xl font-semibold mb-3">Get In Touch</h3>
+        <h3 class="text-4xl font-semibold">Get In Touch</h3>
 
-        <div class="conact-contianer  flex flex-row">
+        <div class="conact-contianer  flex flex-row mt-[100px]">
           <div class="left-contact p-[50px]">
 
             <div class="info-card w-xs flex flex-row border-1 border-slate-300/80 rounded-md bg-white p-5 mb-6"> 
@@ -197,17 +194,17 @@
             method="POST" class="flex flex-col p-8">
               <div class="flex flex-row justify-between mb-3">
                 <div class="flex flex-col mr-4 text-md "><label for="name" class="font-semibold">Name</label>
-                  <input type="text" id="name" name="inquirer" class="border 1 border-slate-300 p-1 rounded-lg">
+                  <input type="text" id="name" name="inquirer" class="border 1 border-slate-300 p-1 rounded-lg bg-slate-50" placeholder="Your name...">
                 </div>
                 
                 <div class="flex flex-col text-md"><label for="name" class="font-semibold">Email</label>
-                  <input type="email" id="email" name="email" class="border 1 border-slate-300 p-1 rounded-lg">
+                  <input type="email" id="email" name="email" class="border 1 border-slate-300 p-1 rounded-lg bg-slate-50" placeholder="Your email...">
                 </div>
               </div>
 
               <div class="flex flex-col text-md">
                 <label for="message" class="font-semibold">Message</label>
-                <textarea class="resize-y rounded-md border-1 border-slate-300 h-20 mb-4 p-1" name="text"></textarea>
+                <textarea class="resize-y rounded-md border-1 border-slate-300 h-20 mb-4 p-1 bg-slate-50" name="text" placeholder="Your message..."></textarea>
 
                 <button type="submit"
             class="text-shadow-lg bg-blue-500 rounded-xl text-lg pt-[5px] pb-[6px] pl-[30px] pr-[30px] font-light mr-[15px] hover:cursor-pointer text-white w-48">Send Message</button>
