@@ -28,6 +28,7 @@
 
       <div class="nav-end">
         <ul class="flex flex-row text-2xl list-none">
+          <li><a class="mr-4" href="#">Home</a></li>
           <li><a class="mr-4" href="#projects-section">Projects</a></li>
           <li><a class="mr-4" href="#experience-section">Experience</a></li>
           <li><a class="mr-4" href="#education-section">Education</a></li>
@@ -36,190 +37,207 @@
       </div>
     </nav>
 
-    <section id="hero-section" class=" h-screen">
-      <div
-        class="flex flex-col text-center mx-auto justify-center h-[80vh] max-w-3xl"
-      >
-        <h3
-          class="text-4xl mb-2 text-slate-500 font-semibold text-shadow-sm font-['Funnel_Sans']"
+    <main class="flex flex-col">
+      <section id="hero-section">
+        <div
+          class="flex flex-col text-center mx-auto justify-center h-[80vh] max-w-3xl"
         >
-          Software Engineer
-        </h3>
-        <h1 class="text-9xl text-shadow-lg font-['Lexend_Deca']">
-          Hi, I'm <span id="name" class="text-blue-500"></span>.
-        </h1>
-        <h3
-          class="text-2xl mt-3 text-slate-500 font-semibold text-shadow-sm font-['Funnel_Sans']"
-        >
-          A passionate developer crafting end-to-end solutions. I create
-          seamless experiences from frontend to backend.
-        </h3>
-
-        <div class="mt-5">
-          <a href="#projects-section"><button
-            class="text-shadow-lg bg-blue-500 rounded-xl text-2xl pt-[5px] pb-[6px] pl-[30px] pr-[30px] font-light mr-[15px] hover:cursor-pointer text-white transition-transform hover:scale-115 duration-1000" href="#projects-section"
+          <h3
+            class="text-4xl mb-2 text-slate-500 font-semibold text-shadow-sm font-['Funnel_Sans']"
           >
-            View Projects
-          </button></a>
+            Software Engineer
+          </h3>
+          <h1 class="text-9xl text-shadow-lg font-['Lexend_Deca']">
+            Hi, I'm <span id="name" class="text-blue-500"></span>.
+          </h1>
+          <h3
+            class="text-2xl mt-3 text-slate-500 font-semibold text-shadow-sm font-['Funnel_Sans']"
+          >
+            A passionate developer crafting end-to-end solutions. I create
+            seamless experiences from frontend to backend.
+          </h3>
 
-          <a href="#contact-section"><button
-            class="text-shadow-lg border-2 border-slate-300 rounded-xl text-2xl pt-[5px] pb-[6px] pl-[15px] pr-[15px] font-light hover:cursor-pointer transition-transform hover:scale-115 duration-1000"
-          >Get in Touch</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects-section" class="bg-slate-100 h-screen pt-7">
-      <div class="flex flex-col p-[60px]">
-        <h1 class="text-md mb-2 font-light text-blue-500">PROJECTS.</h1>
-        <h3 class="text-4xl font-semibold mb-3">Featured Projects</h3>
-        <div class="bg-blue-500 h-[3px] w-[55px] rounded-full"></div>
-
-        <div class="projects-container mt-[50px] flex flex-col mx-auto">
-          <div class="project-card">
-            <div
-              class="border-1 border-slate-300/80 rounded-md bg-white max-w-[800px] min-h-48 p-[20px] text-shadow-xs"
+          <div class="mt-5">
+            <a href="#projects-section"><button
+              class="text-shadow-lg bg-blue-500 rounded-xl text-2xl pt-[5px] pb-[6px] pl-[30px] pr-[30px] font-light mr-[15px] hover:cursor-pointer text-white transition-transform hover:scale-115 duration-1000" href="#projects-section"
             >
-              <h1 class="text-xl font-semibold mb-1">Project Name</h1>
-              <p class="mb-2 text-slate-500 text-lg font-light">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Necessitatibus sunt rem blanditiis fugit ut sit, laudantium
-                voluptatem sed beatae accusantium?
-              </p>
-              <div class="technologies-container">
-                <span
-                  class="inline-flex items-center rounded-full bg-blue-500/10 px-2 py-1 text-xs font-medium text-blue-500"
-                  >Badge</span
-                >
-              </div>
-              <div class="link-container flex flex-row mt-3 text-xl">
-                <a href><i class="bi bi-box-arrow-up-right mr-4"></i></a>
+              View Projects
+            </button></a>
 
-                <a href><i class="bi bi-github"></i></a>
+            <a href="#contact-section"><button
+              class="text-shadow-lg border-2 border-slate-300 rounded-xl text-2xl pt-[5px] pb-[6px] pl-[15px] pr-[15px] font-light hover:cursor-pointer transition-transform hover:scale-115 duration-1000"
+            >Get in Touch</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects-section" class="pt-7 pb-50">
+        <div class="flex flex-col p-[60px]">
+          <h1 class="text-md mb-2 font-light text-blue-500">PROJECTS.</h1>
+          <h3 class="text-4xl font-semibold mb-3">Featured Projects</h3>
+          <div class="bg-blue-500 h-[3px] w-[55px] rounded-full"></div>
+
+          <div class="projects-container mt-[50px] flex flex-col mx-auto">
+            <div class="project-card">
+              <div
+                class="border-1 border-slate-300/80 rounded-md bg-white max-w-[800px] min-h-48 p-[20px] text-shadow-xs"
+              >
+                <h1 class="text-xl font-semibold mb-1">Project Name</h1>
+                <p class="mb-2 text-slate-500 text-lg font-light">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Necessitatibus sunt rem blanditiis fugit ut sit, laudantium
+                  voluptatem sed beatae accusantium?
+                </p>
+                <div class="technologies-container">
+                  <span
+                    class="inline-flex items-center rounded-full bg-blue-500/10 px-2 py-1 text-xs font-medium text-blue-500"
+                    >Badge</span
+                  >
+                </div>
+                <div class="link-container flex flex-row mt-3 text-xl">
+                  <a href><i class="bi bi-box-arrow-up-right mr-4"></i></a>
+
+                  <a href><i class="bi bi-github"></i></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="education-section" class="pt-7 h-screen">
-      <div class="flex flex-col p-[60px]">
-        <h1 class="text-md mb-2 font-light text-blue-500">BACKGROUND.</h1>
-        <h3 class="text-4xl font-semibold mb-3">Education</h3>
-        <div class="bg-blue-500 h-[3px] w-[55px] rounded-full"></div>
+      <section id="education-section" class="pt-7 pb-60">
+        <div class="flex flex-col p-[60px]">
+          <h1 class="text-md mb-2 font-light text-blue-500">BACKGROUND.</h1>
+          <h3 class="text-4xl font-semibold mb-3">Education</h3>
+          <div class="bg-blue-500 h-[3px] w-[55px] rounded-full"></div>
 
-        <div class="education-container mt-[50px] mx-auto flex flex-row flex-wrap">
-          <div class="education-card mb-9 mr-9">
-            <div
-              class="border-1 border-slate-300/80 rounded-md bg-white max-w-[500px] min-h-40 min-w-[380px] p-[20px] text-shadow-xs"
-            >
+          <div class="education-container mt-[50px] mx-auto flex flex-row flex-wrap">
+            <div class="education-card mb-9 mr-9">
+              <div
+                class="border-1 border-slate-300/80 rounded-md bg-white max-w-[500px] min-h-40 min-w-[380px] p-[20px] text-shadow-xs"
+              >
+                <div class="flex flex-row">
+                  <div class="left-card mr-3 mt-2">
+                    <i
+                      class="bi bi-mortarboard bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"
+                    ></i>
+                  </div>
+                  <div class="right-card">
+                    <h3 class="text-slate-500 font-thin">May 2026</h3>
+
+                    <h1 class="text-lg font-semibold mb-1">
+                      B.S. Information Science and Technology
+                    </h1>
+                    <h3 class="text-red-800 mb-3">Temple University</h3>
+                    <p class="text-slate-500 font-thin">
+                      Foundation in programming, databases, networking, and cloud
+                      computing.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cert-card">
+              <div
+                class="border-1 border-slate-300/80 rounded-md bg-white max-w-[500px] min-h-[182px] min-w-[380px] p-[20px] text-shadow-xs"
+              >
               <div class="flex flex-row">
                 <div class="left-card mr-3 mt-2">
-                  <i
-                    class="bi bi-mortarboard bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"
-                  ></i>
+                  <i class="bi bi-award bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"></i>
+                  
                 </div>
                 <div class="right-card">
-                  <h3 class="text-slate-500 font-thin">May 2026</h3>
-
-                  <h1 class="text-lg font-semibold mb-1">
-                    B.S. Information Science and Technology
+                  <h1 class="text-2xl font-semibold mb-1 mt-2">
+                    Certifications
                   </h1>
-                  <h3 class="text-red-800 mb-3">Temple University</h3>
-                  <p class="text-slate-500 font-thin">
-                    Foundation in programming, databases, networking, and cloud
-                    computing.
-                  </p>
+                
+                  
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="cert-card">
-            <div
-              class="border-1 border-slate-300/80 rounded-md bg-white max-w-[500px] min-h-[182px] min-w-[380px] p-[20px] text-shadow-xs"
-            >
-            <div class="flex flex-row">
-              <div class="left-card mr-3 mt-2">
-                <i class="bi bi-award bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"></i>
-                
-              </div>
-              <div class="right-card">
-                <h1 class="text-2xl font-semibold mb-1 mt-2">
-                  Certifications
-                </h1>
-              
-                
-              </div>
-              </div>
-              <ul class="list-disc mt-5 pl-6">
-                <li>Coming soon</li>
-              </ul>
-          
-              
-          </div>
-        
-        </div>
-      </div>
-    </section>
-
-    <section id="contact-section" class="h-screen pt-7">
-      <div class="flex flex-col p-[60px] justify-center items-center">
-        <h1 class="text-md mb-2 font-light text-blue-500">CONTACT.</h1>
-        <h3 class="text-4xl font-semibold">Get In Touch</h3>
-
-        <div class="conact-contianer  flex flex-row mt-[100px]">
-          <div class="left-contact p-[50px]">
-
-            <div class="info-card w-xs flex flex-row border-1 border-slate-300/80 rounded-md bg-white p-5 mb-6"> 
-              <div class="mt-1 ">
-                <i class="bi bi-envelope bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"></i>
-
-              </div>
-              <div class="ml-4"><h3 class="text-sm text-slate-500 font-semibold">Email</h3>
-              <h1>mxbalogun@gmail.com</h1></div>
-            </div>
+                </div>
+                <ul class="list-disc mt-5 pl-6">
+                  <li>Coming soon</li>
+                </ul>
             
-            <div class="info-card flex flex-row border-1 border-slate-300/80 rounded-md bg-white p-5"> 
-              <div class="mt-1">
-                <i class="bi bi-geo-alt bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"></i>
-
-              </div>
-              <div class="ml-4"><h3 class="text-sm text-slate-500 font-semibold">New York</h3>
-              <h1>New York City</h1></div>
-            </div>
-          </div>
-          <div class="right-contact bg-white w-[500px] border-1 border-slate-300 rounded-lg mt-9">
-            <form action="https://formspree.io/f/xlgeqala"
-            method="POST" class="flex flex-col p-8">
-              <div class="flex flex-row justify-between mb-3">
-                <div class="flex flex-col mr-4 text-md "><label for="name" class="font-semibold">Name</label>
-                  <input type="text" id="name" name="inquirer" class="border 1 border-slate-300 p-1 rounded-lg bg-slate-50" placeholder="Your name...">
-                </div>
                 
-                <div class="flex flex-col text-md"><label for="name" class="font-semibold">Email</label>
-                  <input type="email" id="email" name="email" class="border 1 border-slate-300 p-1 rounded-lg bg-slate-50" placeholder="Your email...">
-                </div>
-              </div>
-
-              <div class="flex flex-col text-md">
-                <label for="message" class="font-semibold">Message</label>
-                <textarea class="resize-y rounded-md border-1 border-slate-300 h-20 mb-4 p-1 bg-slate-50" name="text" placeholder="Your message..."></textarea>
-
-                <button type="submit"
-            class="text-shadow-lg bg-blue-500 rounded-xl text-lg pt-[5px] pb-[6px] pl-[30px] pr-[30px] font-light mr-[15px] hover:cursor-pointer text-white w-48">Send Message</button>
-              </div>
-
-            </form>
-              
-
+            </div>
+          
           </div>
         </div>
+      </section>
 
-      
-  
+      <section id="contact-section" class="pt-7 pb-50">
+        <div class="flex flex-col p-[60px] justify-center items-center">
+          <h1 class="text-md mb-2 font-light text-blue-500">CONTACT.</h1>
+          <h3 class="text-4xl font-semibold">Get In Touch</h3>
+
+          <div class="conact-contianer  flex flex-row">
+            <div class="left-contact p-[50px]">
+
+              <div class="info-card w-xs flex flex-row border-1 border-slate-300/80 rounded-md bg-white p-5 mb-6"> 
+                <div class="mt-1 ">
+                  <i class="bi bi-envelope bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"></i>
+
+                </div>
+                <div class="ml-4"><h3 class="text-sm text-slate-500 font-semibold">Email</h3>
+                <h1>mxbalogun@gmail.com</h1></div>
+              </div>
+              
+              <div class="info-card flex flex-row border-1 border-slate-300/80 rounded-md bg-white p-5"> 
+                <div class="mt-1">
+                  <i class="bi bi-geo-alt bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"></i>
+
+                </div>
+                <div class="ml-4"><h3 class="text-sm text-slate-500 font-semibold">New York</h3>
+                <h1>New York City</h1></div>
+              </div>
+            </div>
+            <div class="right-contact bg-white w-[500px] border-1 border-slate-300 rounded-lg mt-9">
+              <form action="https://formspree.io/f/xlgeqala"
+              method="POST" class="flex flex-col p-8">
+                <div class="flex flex-row justify-between mb-3">
+                  <div class="flex flex-col mr-4 text-md "><label for="name" class="font-semibold">Name</label>
+                    <input type="text" id="name" name="inquirer" class="border 1 border-slate-300 p-1 rounded-lg bg-slate-50" placeholder="Your name...">
+                  </div>
+                  
+                  <div class="flex flex-col text-md"><label for="name" class="font-semibold">Email</label>
+                    <input type="email" id="email" name="email" class="border 1 border-slate-300 p-1 rounded-lg bg-slate-50" placeholder="Your email...">
+                  </div>
+                </div>
+
+                <div class="flex flex-col text-md">
+                  <label for="message" class="font-semibold">Message</label>
+                  <textarea class="resize-y rounded-md border-1 border-slate-300 h-20 mb-4 p-1 bg-slate-50" name="text" placeholder="Your message..."></textarea>
+
+                  <button type="submit"
+              class="text-shadow-lg bg-blue-500 rounded-xl text-lg pt-[5px] pb-[6px] pl-[30px] pr-[30px] font-light mr-[15px] hover:cursor-pointer text-white w-48">Send Message</button>
+                </div>
+
+              </form>
+                
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+  </main>
+
+    <footer>
+      <div class="footer-container p-6 bg-white border-t-2 border-slate-300 flex flex-row justify-between text-slate-500 text-shadow-md">
+        <div class="footer-left">
+          <i class="bi bi-c-circle text-md inline font-semibold"></i>
+          <h3 class="text-lg inline">Mike Balogun. All Rights Reserved.</h3>
+        </div>
+        <div class="footer-right text-xl">
+          <a href="https://www.linkedin.com/in/mike-balogun/" target="_blank">
+            <i class="bi bi-linkedin mr-4"></i>
+          </a>
+          <a href="https://github.com/mikexbal" target="_blank">
+            <i class="bi bi-github"></i>
+          </a>
+        </div>
       </div>
-    </section>
+    </footer>
 
     <script type="module" src="/src/main.js"></script>
   </body>
