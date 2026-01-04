@@ -31,47 +31,40 @@
           <li><a class="mr-4" href="#">Home</a></li>
           <li><a class="mr-4" href="#projects-section">Projects</a></li>
           <li><a class="mr-4" href="#experience-section">Experience</a></li>
-          <li><a class="mr-4" href="#education-section">Education</a></li>
           <li><a class="mr-4" href="#contact-section">Contact</a></li>
         </ul>
       </div>
     </nav>
 
     <main class="flex flex-col">
-      <section id="hero-section">
-        <div
-          class="flex flex-col text-center mx-auto justify-center h-[80vh] max-w-3xl"
-        >
-          <h3
-            class="text-4xl mb-2 text-slate-500 font-semibold text-shadow-sm font-['Funnel_Sans']"
-          >
+      <section id="hero-section" class="pb-60 lg:pb-0">
+        <div class="flex flex-col text-center mx-auto justify-center h-[40vh] md:h-[80vh] max-w-3xl">
+          <h3 class="text-2xl md:text-4xl mb-2 text-slate-500 font-semibold text-shadow-sm font-['Funnel_Sans']">
             Software Engineer
           </h3>
-          <h1 class="text-9xl text-shadow-lg font-['Lexend_Deca']">
+          <h1 class="text-6xl md:text-9xl text-shadow-lg font-['Lexend_Deca']">
             Hi, I'm <span id="name" class="text-blue-500"></span>.
           </h1>
-          <h3
-            class="text-2xl mt-3 text-slate-500 font-semibold text-shadow-sm font-['Funnel_Sans']"
-          >
+          <h3 class="text-lg mt-3 text-slate-500 font-semibold text-shadow-sm font-['Funnel_Sans'] lg:text-2xl">
             A passionate developer crafting end-to-end solutions. I create
             seamless experiences from frontend to backend.
           </h3>
 
           <div class="mt-5">
             <a href="#projects-section"><button
-              class="text-shadow-lg bg-blue-500 rounded-xl text-2xl pt-[5px] pb-[6px] pl-[30px] pr-[30px] font-light mr-[15px] hover:cursor-pointer text-white transition-transform hover:scale-115 duration-1000" href="#projects-section"
+              class="text-shadow-lg bg-blue-500 rounded-xl text-lg md:text-2xl pt-[5px] pb-[6px] pl-[30px] pr-[30px] font-light mr-[15px] hover:cursor-pointer text-white transition-transform hover:scale-115 duration-1000" href="#projects-section"
             >
               View Projects
             </button></a>
 
             <a href="#contact-section"><button
-              class="text-shadow-lg border-2 border-slate-300 rounded-xl text-2xl pt-[5px] pb-[6px] pl-[15px] pr-[15px] font-light hover:cursor-pointer transition-transform hover:scale-115 duration-1000"
+              class="text-shadow-lg border-2 border-slate-300 rounded-xl text-lg md:text-2xl pt-[5px] pb-[6px] pl-[15px] pr-[15px] font-light hover:cursor-pointer transition-transform hover:scale-115 duration-1000"
             >Get in Touch</a>
           </div>
         </div>
       </section>
 
-      <section id="projects-section" class="pt-7 pb-50">
+      <section id="projects-section" class="pt-15 lg:pt-7 pb-50">
         <div class="flex flex-col p-[60px]">
           <h1 class="text-md mb-2 font-light text-blue-500">PROJECTS.</h1>
           <h3 class="text-4xl font-semibold mb-3">Featured Projects</h3>
@@ -105,12 +98,119 @@
         </div>
       </section>
 
-      <section id="education-section" class="pt-7 pb-60">
+      <section id="experience-section" class="pt-15 lg:pt-7 pb-50">
         <div class="flex flex-col p-[60px]">
-          <h1 class="text-md mb-2 font-light text-blue-500">BACKGROUND.</h1>
-          <h3 class="text-4xl font-semibold mb-3">Education</h3>
+          <h1 class="text-md mb-2 font-light text-blue-500">PORTFOLIO.</h1>
+          <h3 class="text-4xl font-semibold mb-3">Experience</h3>
           <div class="bg-blue-500 h-[3px] w-[55px] rounded-full"></div>
-          <div class="career-conatiner flex flex-row">
+          <div class="background-container flex flex-col lg:flex-row justify-center items-center">
+            <div class="education-container flex flex-col pt-10 md:pt-20">
+              <div class="education-card mb-9 mr-9">
+                <div class="border-1 border-slate-300/80 rounded-md bg-white max-w-[500px] min-h-40 min-w-[380px] p-[20px] text-shadow-xs">
+                  <div class="flex flex-row">
+                    <div class="left-card mr-3 mt-2">
+                      <i class="bi bi-mortarboard bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"></i>
+                    </div>
+                    <div class="right-card text-shadow-none">
+                      <h1 class="text-lg font-semibold">
+                        B.S. Information Science and Technology
+                      </h1>
+                      <h3 class="text-red-800 font-semibold">Temple University</h3>
+                      <h3 class="text-slate-500 mb-3">May 2026</h3>
+                      <p class="text-slate-500">
+                        Foundation in programming, databases, networking, and cloud
+                        computing.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="certification-card mb-9 mr-9">
+                <div class="border-1 border-slate-300/80 rounded-md bg-white max-w-[500px] min-h-40 min-w-[380px] p-[20px] text-shadow-xs">
+                  <div class="flex flex-row">
+                    <div class="left-card mr-3 mt-2">
+                      <i class="bi bi-award bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"></i>
+                    </div>
+                    <div class="right-card text-shadow-none">
+                      <h1 class="text-xl font-semibold mt-3 mb-7">
+                        Certifications
+                      </h1>
+                  
+                  
+                      <ul class="list-disc">
+                        <li class="font-semibold"><p>Coming soon</p></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="career-container hidden lg:block">
+              <div class="flex items-center gap-2">
+                <div class="div-circle bg-slate-600 h-[30px] w-[30px] rounded-full mt-4"></div>
+                <div class="flex flex-col pt-6">
+                  <h3 class="text-xl font-semibold">Full-Stack Engineer Intern - <span class="text-violet-800">Arplans</span></h3>
+                  <p class="text-slate-500 font-semibold italic">Dec. 2025 - Present</p>
+                </div>
+              </div>
+              <div class="div-line bg-slate-600 h-[50px] w-[10px] rounded-full ms-[9px] -mt-1"></div>
+              <div class="flex items-center gap-2 -mt-3">
+                <div class="div-circle bg-slate-600 h-[30px] w-[30px] rounded-full"></div>
+                <div class="flex flex-col">
+                  <h3 class="text-xl font-semibold pt-5">Lab Consultant - <span class="text-red-800">Temple University</span></h3>
+                  <p class="text-slate-500 font-semibold italic">Aug. 2025 - Present</p>
+                </div>
+              </div>
+              <div class="div-line bg-slate-600 h-[80px] w-[10px] rounded-full ms-[9px] -mt-3"></div>
+              <div class="flex items-center gap-2 -mt-3">
+                <div class="div-circle bg-slate-600 h-[30px] w-[30px] rounded-full"></div>
+                <div class="flex flex-col">
+                  <h3 class="text-xl font-semibold pt-5">Software Engineering Intern - <span class="text-sky-500">Sightly</span></h3>
+                  <p class="text-slate-500 font-semibold italic">Jul. 2023 - Aug. 2023</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="career-container-sm lg:hidden mt-5">
+              <div class="career-card mb-9 mr-9">
+                <div class="border-1 border-slate-300/80 rounded-md bg-white max-w-[500px] min-h-40 min-w-[380px] p-[20px] text-shadow-xs">
+                  <div class="flex flex-row">
+                    <div class="left-card mr-3 mt-2">
+                      <i class="bi bi-briefcase bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"></i>
+                    </div>
+                    <div class="right-card text-shadow-none">
+                      <h1 class="text-lg font-semibold mb-5">
+                        Career History
+                      </h1>
+                  
+                  
+                      <ul>
+                        <div class="mb-2">
+                          <li class="font-semibold"><p>Full-Stack Engineer Intern - <span class="text-violet-800">Arplans</span></p></li>
+                          <li class="text-sm text-slate-500 font-semibold">Aug. 2023 - Jul. 2023</li>
+                        </div>
+                        <div class="mb-2">
+                          <li class="font-semibold"><p>Lab Consultant - <span class="text-red-800">Temple University</span></p></li>
+                          <li class="text-sm text-slate-500 font-semibold">Aug. 2025 - present</li>
+                        </div>
+                        
+                        <div class="mb-2">
+                          <li class="font-semibold"><p>Software Engineer Intern - <span class="text-sky-500">Sightly</span></p></li>
+                          <li class="text-sm text-slate-500 font-semibold">Aug. 2023 - Jul. 2023</li>
+                        </div>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        
+          
+          
+          <!-- <div class="career-conatiner flex flex-row">
             <div class="career-left">
               
             </div>
@@ -122,7 +222,7 @@
               </div>
               
               
-              <div class="bg-blue-500 h-[55px] w-[10px] rounded-full"></div>
+              
             </div>
 
           </div>
@@ -179,16 +279,16 @@
           </div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio cupiditate assumenda iure adipisci nostrum voluptate. Debitis architecto dolorem corporis enim.</p>
         
-        </div>
+        </div> -->
       </section>
 
-      <section id="contact-section" class="pt-7 pb-50">
-        <div class="flex flex-col p-[60px] justify-center items-center">
+      <section id="contact-section" class="pt-15 lg:pt-7 md:pb-30">
+        <div class="flex flex-col p-[60px] m justify-center items-center">
           <h1 class="text-md mb-2 font-light text-blue-500">CONTACT.</h1>
           <h3 class="text-4xl font-semibold">Get In Touch</h3>
 
-          <div class="conact-contianer  flex flex-row">
-            <div class="left-contact p-[50px]">
+          <div class="conact-contianer flex flex-col md:flex-row md:mt-10 -mt-8">
+            <div class="left-contact p-[50px] max-md:ml-5">
 
               <div class="info-card w-xs flex flex-row border-1 border-slate-300/80 rounded-md bg-white p-5 mb-6"> 
                 <div class="mt-1 ">
@@ -199,16 +299,17 @@
                 <h1>mxbalogun@gmail.com</h1></div>
               </div>
               
-              <div class="info-card flex flex-row border-1 border-slate-300/80 rounded-md bg-white p-5"> 
+              <div class="info-card w-xs flex flex-row border-1 border-slate-300/80 rounded-md bg-white p-5"> 
                 <div class="mt-1">
                   <i class="bi bi-geo-alt bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"></i>
-
                 </div>
-                <div class="ml-4"><h3 class="text-sm text-slate-500 font-semibold">New York</h3>
-                <h1>New York City</h1></div>
+                <div class="ml-4">
+                  <h3 class="text-sm text-slate-500 font-semibold">New York</h3>
+                  <h1>New York City</h1>
+                </div>
               </div>
             </div>
-            <div class="right-contact bg-white w-[500px] border-1 border-slate-300 rounded-lg mt-9">
+            <div class="right-contact bg-white w-full max-w-[500px] md:max-w-[500px] border-1 border-slate-300 rounded-lg">
               <form action="https://formspree.io/f/xlgeqala"
               method="POST" class="flex flex-col p-8">
                 <div class="flex flex-row justify-between mb-3">
