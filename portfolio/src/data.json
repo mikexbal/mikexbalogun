@@ -10,38 +10,14 @@
         {
             "title": "Car Rental Program",
             "desc": "Desktop application that allows employees to manage vehicle inventory, process rental and return transactions, and search available cars through an integrated database.",
-            "tech": ["C#, .NET Framework, Microsoft Access"],
-            "live-demo": "",
-            "github": ""
-        },
-
-        {
-            "title": "",
-            "desc": "",
-            "tech": [""],
-            "live-demo": "",
+            "tech": ["C#", ".NET Framework", "Microsoft Access"],
+            "live": "",
             "github": ""
         }
 
-    ],
+       
 
-    "experience": [
-        {
-            "date": "",
-            "job-title": "",
-            "company": "",
-            "desc": ""
-        }
-    ],
+    ]
 
-    "education": 
-    {
-        "year": 0,
-        "degree": "",
-        "university": "",
-        "desc": ""
-    },
 
-    "certifications": [""]
-    
 }
