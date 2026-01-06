@@ -13,10 +13,23 @@
             "tech": ["C#", ".NET Framework", "Microsoft Access"],
             "live": "",
             "github": ""
+        },
+
+        {
+            "title": "Weather App",
+            "desc": "Web application that allows users to search real-time weather conditions by city, leveraging a React frontend and a Python Flask backend integrated with third-party geolocation and weather APIs.",
+            "tech": ["React, Python, Flask"],
+            "live": "",
+            "github": "https://github.com/mikexbal/Weathery"
         }
+    ],
 
-       
-
+    "career": [
+        {
+            "title": "",
+            "company": "",
+            "timeline": ""
+        }
     ]
 
 
