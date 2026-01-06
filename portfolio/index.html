@@ -99,7 +99,10 @@
           <h1 class="text-md mb-2 font-light text-blue-500">PORTFOLIO.</h1>
           <h3 class="text-4xl font-semibold mb-3">Experience</h3>
           <div class="bg-blue-500 h-[3px] w-[55px] rounded-full"></div>
+          
           <div class="background-container flex flex-col lg:flex-row justify-center items-center">
+            
+            <!-- Education Container -->
             <div class="education-container flex flex-col pt-10 md:pt-20">
               <div class="education-card mb-9 mr-9">
                 <div class="border-1 border-slate-300/80 rounded-md bg-white max-w-[500px] min-h-40 min-w-[380px] p-[20px] text-shadow-xs">
@@ -121,6 +124,7 @@
                   </div>
                 </div>
               </div>
+      
               <div class="certification-card mb-9 mr-9">
                 <div class="border-1 border-slate-300/80 rounded-md bg-white max-w-[500px] min-h-40 min-w-[380px] p-[20px] text-shadow-xs">
                   <div class="flex flex-row">
@@ -131,8 +135,6 @@
                       <h1 class="text-xl font-semibold mt-3 mb-7">
                         Certifications
                       </h1>
-                  
-                  
                       <ul class="list-disc">
                         <li class="font-semibold"><p>Coming soon</p></li>
                       </ul>
@@ -141,32 +143,46 @@
                 </div>
               </div>
             </div>
-            <div class="career-container hidden lg:block">
-              <div class="flex items-center gap-2">
-                <div class="div-circle bg-slate-600 h-[30px] w-[30px] rounded-full mt-4"></div>
-                <div class="flex flex-col pt-6">
-                  <h3 class="text-xl font-semibold">Full-Stack Engineer Intern - <span class="text-violet-800">Arplans</span></h3>
-                  <p class="text-slate-500 font-semibold italic">Dec. 2025 - Present</p>
+            <!-- /Education Container -->
+      
+            <!-- Career Container (Desktop) -->
+            <div class="career-container hidden lg:block w-[450px]">
+              <div class="flex flex-row justify-between" id="info-container">
+                <div>
+                  <h3 class="text-lg font-semibold">Full-Stack Engineer Intern</h3>
+                  <p class="text-slate-500">Arplans</p>
+                </div>
+                <div class="mt-3">
+                  <h3 class="text-slate-500 font-light text-md">Dec 2025 - Present</h3>
                 </div>
               </div>
-              <div class="div-line bg-slate-600 h-[50px] w-[10px] rounded-full ms-[9px] -mt-1"></div>
-              <div class="flex items-center gap-2 -mt-3">
-                <div class="div-circle bg-slate-600 h-[30px] w-[30px] rounded-full"></div>
-                <div class="flex flex-col">
-                  <h3 class="text-xl font-semibold pt-5">Lab Consultant - <span class="text-red-800">Temple University</span></h3>
-                  <p class="text-slate-500 font-semibold italic">Aug. 2025 - Present</p>
+              <div class="bg-blue-500 h-[2px] w-full rounded-full mt-2 mb-10"></div>
+      
+              <div class="flex flex-row justify-between" id="info-container">
+                <div>
+                  <h3 class="text-lg font-semibold">Lab Consultant</h3>
+                  <p class="text-slate-500">Temple University</p>
+                </div>
+                <div class="mt-3">
+                  <h3 class="text-slate-500 font-light text-md">Aug 2025 - Present</h3>
                 </div>
               </div>
-              <div class="div-line bg-slate-600 h-[80px] w-[10px] rounded-full ms-[9px] -mt-3"></div>
-              <div class="flex items-center gap-2 -mt-3">
-                <div class="div-circle bg-slate-600 h-[30px] w-[30px] rounded-full"></div>
-                <div class="flex flex-col">
-                  <h3 class="text-xl font-semibold pt-5">Software Engineering Intern - <span class="text-sky-500">Sightly</span></h3>
-                  <p class="text-slate-500 font-semibold italic">Jul. 2023 - Aug. 2023</p>
+              <div class="bg-blue-500 h-[2px] w-full rounded-full mt-2 mb-10"></div>
+      
+              <div class="flex flex-row justify-between" id="info-container">
+                <div>
+                  <h3 class="text-lg font-semibold">Software Engineer Extern</h3>
+                  <p class="text-slate-500">Sightly</p>
+                </div>
+                <div class="mt-3">
+                  <h3 class="text-slate-500 font-light text-md">Jul 2023 - Aug 2023</h3>
                 </div>
               </div>
+              <div class="bg-blue-500 h-[2px] w-full rounded-full mt-2 mb-10"></div>
             </div>
-
+            <!-- /Career Container (Desktop) -->
+      
+            <!-- Career Container (Mobile) -->
             <div class="career-container-sm lg:hidden mt-5">
               <div class="career-card mb-9 mr-9">
                 <div class="border-1 border-slate-300/80 rounded-md bg-white max-w-[500px] min-h-40 min-w-[380px] p-[20px] text-shadow-xs">
@@ -178,104 +194,31 @@
                       <h1 class="text-lg font-semibold mb-5">
                         Career History
                       </h1>
-                  
-                  
                       <ul>
                         <div class="mb-2">
                           <li class="font-semibold"><p>Full-Stack Engineer Intern - <span class="text-violet-800">Arplans</span></p></li>
-                          <li class="text-sm text-slate-500 font-semibold">Aug. 2023 - Jul. 2023</li>
+                          <li class="text-sm text-slate-500 font-semibold">Dec. 2025 - Present</li>
                         </div>
                         <div class="mb-2">
                           <li class="font-semibold"><p>Lab Consultant - <span class="text-red-800">Temple University</span></p></li>
                           <li class="text-sm text-slate-500 font-semibold">Aug. 2025 - present</li>
                         </div>
-                        
                         <div class="mb-2">
-                          <li class="font-semibold"><p>Software Engineer Intern - <span class="text-sky-500">Sightly</span></p></li>
+                          <li class="font-semibold"><p>Software Engineer Extern - <span class="text-sky-500">Sightly</span></p></li>
                           <li class="text-sm text-slate-500 font-semibold">Aug. 2023 - Jul. 2023</li>
                         </div>
-                        
                       </ul>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <!-- /Career Container (Mobile) -->
+      
           </div>
-
-        
-          
-          
-          <!-- <div class="career-conatiner flex flex-row">
-            <div class="career-left">
-              
-            </div>
-            <div class="career-right">
-              <div class="career-card">
-                <h3 class="text-2xl"><span class="mt-20"><i class="bi bi-circle-fill text-blue-500 text-2xl mr-2"></i></span>Full-Stack Engineer Intern</h3>
-                <p class="pl-8">December 2025 - Present</p>
-                <p class="pl-8">Built and maintained full-stack features for a scalable web platform.</p>
-              </div>
-              
-              
-              
-            </div>
-
-          </div>
-          <div class="education-container mt-[50px] mx-auto flex flex-col">
-            <div class="education-card mb-9 mr-9">
-              <div
-                class="border-1 border-slate-300/80 rounded-md bg-white max-w-[500px] min-h-40 min-w-[380px] p-[20px] text-shadow-xs"
-              >
-                <div class="flex flex-row">
-                  <div class="left-card mr-3 mt-2">
-                    <i
-                      class="bi bi-mortarboard bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"
-                    ></i>
-                  </div>
-                  <div class="right-card">
-                    <h3 class="text-slate-500 font-thin">May 2026</h3>
-
-                    <h1 class="text-lg font-semibold mb-1">
-                      B.S. Information Science and Technology
-                    </h1>
-                    <h3 class="text-red-800 mb-3">Temple University</h3>
-                    <p class="text-slate-500 font-thin">
-                      Foundation in programming, databases, networking, and cloud
-                      computing.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cert-card">
-              <div
-                class="border-1 border-slate-300/80 rounded-md bg-white max-w-[500px] min-h-[182px] min-w-[380px] p-[20px] text-shadow-xs"
-              >
-              <div class="flex flex-row">
-                <div class="left-card mr-3 mt-2">
-                  <i class="bi bi-award bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"></i>
-                  
-                </div>
-                <div class="right-card">
-                  <h1 class="text-2xl font-semibold mb-1 mt-2">
-                    Certifications
-                  </h1>
-                
-                  
-                </div>
-                </div>
-                <ul class="list-disc mt-5 pl-6">
-                  <li>Coming soon</li>
-                </ul>
-            
-                
-            </div>
-          
-          </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio cupiditate assumenda iure adipisci nostrum voluptate. Debitis architecto dolorem corporis enim.</p>
-        
-        </div> -->
+          <!-- /background-container -->
+      
+        </div>
       </section>
 
       <section id="contact-section" class="pt-15 lg:pt-7 md:pb-30">
