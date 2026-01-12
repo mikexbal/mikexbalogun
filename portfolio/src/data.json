@@ -12,13 +12,13 @@
             "desc": "Desktop application that allows employees to manage vehicle inventory, process rental and return transactions, and search available cars through an integrated database.",
             "tech": ["C#", ".NET Framework", "Microsoft Access"],
             "live": "",
-            "github": ""
+            "github": "https://github.com/mikexbal/Car-Rental-Program"
         },
 
         {
             "title": "Weather App",
             "desc": "Web application that allows users to search real-time weather conditions by city, leveraging a React frontend and a Python Flask backend integrated with third-party geolocation and weather APIs.",
-            "tech": ["React, Python, Flask"],
+            "tech": ["React", "Python", "Flask"],
             "live": "",
             "github": "https://github.com/mikexbal/Weathery"
         }
