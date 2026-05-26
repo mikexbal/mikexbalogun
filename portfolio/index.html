@@ -17,22 +17,51 @@
   </head>
   <body class="bg-slate-100">
     <nav
-      class="navbar flex flex-row flex-wrap justify-between p-5 font-[Lexend_Deca] sticky top-0  backdrop-blur-sm"
+      id="navbar"
+      class="navbar sticky top-0 z-50 border-b border-slate-200/60 bg-slate-100/90 p-5 font-[Lexend_Deca] backdrop-blur-sm"
     >
-      <div class="nav-start">
-        <h1 class="text-2xl">
-          <a href="#">Mike Balogun</a
-          ><span class="text-blue-500 text-3xl">.</span>
-        </h1>
+      <div class="flex items-center justify-between gap-4">
+        <div class="nav-start">
+          <h1 class="text-2xl">
+            <a href="#">Mike Balogun</a
+            ><span class="text-blue-500 text-3xl">.</span>
+          </h1>
+        </div>
+
+        <button
+          id="nav-toggle"
+          type="button"
+          class="nav-toggle relative flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-slate-200 bg-white text-2xl text-slate-700 transition-colors hover:bg-slate-50 lg:hidden"
+          aria-expanded="false"
+          aria-controls="nav-menu-mobile"
+          aria-label="Toggle navigation menu"
+        >
+          <i class="bi bi-list absolute transition-all duration-300 ease-in-out nav-icon-open opacity-100 scale-100 rotate-0"></i>
+          <i class="bi bi-x-lg absolute transition-all duration-300 ease-in-out nav-icon-close opacity-0 scale-75 rotate-90"></i>
+        </button>
+
+        <div class="nav-end hidden lg:block">
+          <ul class="flex flex-row text-2xl list-none gap-1">
+            <li><a class="px-4 transition-colors hover:text-blue-500" href="#">Home</a></li>
+            <li><a class="px-4 transition-colors hover:text-blue-500" href="#projects-section">Projects</a></li>
+            <li><a class="px-4 transition-colors hover:text-blue-500" href="#experience-section">Experience</a></li>
+            <li><a class="px-4 transition-colors hover:text-blue-500" href="#contact-section">Contact</a></li>
+          </ul>
+        </div>
       </div>
 
-      <div class="nav-end">
-        <ul class="flex flex-row text-2xl list-none">
-          <li><a class="mr-4" href="#">Home</a></li>
-          <li><a class="mr-4" href="#projects-section">Projects</a></li>
-          <li><a class="mr-4" href="#experience-section">Experience</a></li>
-          <li><a class="mr-4" href="#contact-section">Contact</a></li>
-        </ul>
+      <div
+        id="nav-menu-mobile"
+        class="nav-mobile-panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out lg:hidden"
+      >
+        <div class="overflow-hidden">
+          <ul class="flex list-none flex-col gap-1 border-t border-slate-200/80 pt-4 text-xl">
+            <li><a class="nav-mobile-link block rounded-lg px-2 py-2 transition-colors hover:bg-white/80 hover:text-blue-500" href="#">Home</a></li>
+            <li><a class="nav-mobile-link block rounded-lg px-2 py-2 transition-colors hover:bg-white/80 hover:text-blue-500" href="#projects-section">Projects</a></li>
+            <li><a class="nav-mobile-link block rounded-lg px-2 py-2 transition-colors hover:bg-white/80 hover:text-blue-500" href="#experience-section">Experience</a></li>
+            <li><a class="nav-mobile-link block rounded-lg px-2 py-2 transition-colors hover:bg-white/80 hover:text-blue-500" href="#contact-section">Contact</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -66,230 +95,158 @@
 
       <section id="projects-section" class="pt-15 lg:pt-7 pb-50">
         <div class="flex flex-col p-[60px]">
-          <h1 class="text-md mb-2 font-light text-blue-500">PROJECTS.</h1>
-          <h3 class="text-4xl font-semibold mb-3">Featured Projects</h3>
-          <div class="bg-blue-500 h-[3px] w-[55px] rounded-full"></div>
+          <h1 class="text-md mb-2 font-light text-blue-500 uppercase tracking-wide">PROJECTS</h1>
+          <h3 class="text-4xl font-semibold mb-3 font-['Lexend_Deca']">
+            Featured Work<span class="text-blue-500">.</span>
+          </h3>
 
-          <div id="project-container" class="mt-[50px] flex flex-col mx-auto">
-              <!-- <div class="border-1 border-slate-300/80 rounded-md bg-white max-w-[800px] min-h-48 p-[20px] text-shadow-xs">
-                <h1 class="text-xl font-semibold mb-1">Project Name</h1>
-                <p class="mb-2 text-slate-500 text-lg font-light">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Necessitatibus sunt rem blanditiis fugit ut sit, laudantium
-                  voluptatem sed beatae accusantium?
-                </p>
-                <div class="technologies-container">
-                  <span
-                    class="inline-flex items-center rounded-full bg-blue-500/10 px-2 py-1 text-xs font-medium text-blue-500"
-                    >Badge</span
-                  >
-                </div>
-                <div class="link-container flex flex-row mt-3 text-xl">
-                  <a href=""><i class="bi bi-box-arrow-up-right mr-4"></i></a>
-
-                  <a href=""><i class="bi bi-github"></i></a>
-                </div>
-              </div> -->
+          <div id="project-container" class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5 w-full max-w-6xl mx-auto">
           </div>
         </div>
       </section>
 
       <section id="experience-section" class="pt-15 lg:pt-7 pb-50">
         <div class="flex flex-col p-[60px]">
-          <h1 class="text-md mb-2 font-light text-blue-500">PORTFOLIO.</h1>
-          <h3 class="text-4xl font-semibold mb-3">Experience</h3>
-          <div class="bg-blue-500 h-[3px] w-[55px] rounded-full"></div>
-          
-          <div class="background-container flex flex-col lg:flex-row justify-center items-center">
-            
-            <!-- Education Container -->
-            <div class="education-container flex flex-col pt-10 md:pt-20">
-              <div class="education-card mb-9 mr-9">
-                <div class="border-1 border-slate-300/80 rounded-md bg-white max-w-[500px] min-h-40 min-w-[380px] p-[20px] text-shadow-xs">
-                  <div class="flex flex-row">
-                    <div class="left-card mr-3 mt-2">
-                      <i class="bi bi-mortarboard bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"></i>
-                    </div>
-                    <div class="right-card text-shadow-none">
-                      <h1 class="text-lg font-semibold">
-                        B.S. Information Science and Technology
-                      </h1>
-                      <h3 class="text-red-800 font-semibold">Temple University</h3>
-                      <h3 class="text-slate-500 mb-3">May 2026</h3>
-                      <p class="text-slate-500">
-                        Foundation in programming, databases, networking, and cloud
-                        computing.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-      
-              <div class="certification-card mb-9 mr-9">
-                <div class="border-1 border-slate-300/80 rounded-md bg-white max-w-[500px] min-h-40 min-w-[380px] p-[20px] text-shadow-xs">
-                  <div class="flex flex-row">
-                    <div class="left-card mr-3 mt-2">
-                      <i class="bi bi-award bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"></i>
-                    </div>
-                    <div class="right-card text-shadow-none">
-                      <h1 class="text-xl font-semibold mt-3 mb-7">
-                        Certifications
-                      </h1>
-                      <ul class="list-disc">
-                        <li class="font-semibold"><p>In progress</p></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /Education Container -->
-      
-            <!-- Career Container (Desktop) -->
-            <div class="career-container hidden lg:block w-[450px]">
-              <div class="flex flex-row justify-between" id="info-container">
-                <div>
-                  <h3 class="text-lg font-semibold">Full-Stack Engineer Intern</h3>
-                  <p class="text-slate-500">Arplans</p>
-                </div>
-                <div class="mt-3">
-                  <h3 class="text-slate-500 font-light text-md">Dec 2025 - Present</h3>
-                </div>
-              </div>
-              <div class="bg-blue-500 h-[2px] w-full rounded-full mt-2 mb-10"></div>
-      
-              <div class="flex flex-row justify-between" id="info-container">
-                <div>
-                  <h3 class="text-lg font-semibold">Lab Consultant</h3>
-                  <p class="text-slate-500">Temple University</p>
-                </div>
-                <div class="mt-3">
-                  <h3 class="text-slate-500 font-light text-md">Aug 2025 - Present</h3>
-                </div>
-              </div>
-              <div class="bg-blue-500 h-[2px] w-full rounded-full mt-2 mb-10"></div>
-      
-              <div class="flex flex-row justify-between" id="info-container">
-                <div>
-                  <h3 class="text-lg font-semibold">Software Engineer Extern</h3>
-                  <p class="text-slate-500">Sightly</p>
-                </div>
-                <div class="mt-3">
-                  <h3 class="text-slate-500 font-light text-md">Jul 2023 - Aug 2023</h3>
-                </div>
-              </div>
-              <div class="bg-blue-500 h-[2px] w-full rounded-full mt-2 mb-10"></div>
-            </div>
-            <!-- /Career Container (Desktop) -->
-      
-            <!-- Career Container (Mobile) -->
-            <div class="career-container-sm lg:hidden mt-5">
-              <div class="career-card mb-9 mr-9">
-                <div class="border-1 border-slate-300/80 rounded-md bg-white max-w-[500px] min-h-40 min-w-[380px] p-[20px] text-shadow-xs">
-                  <div class="flex flex-row">
-                    <div class="left-card mr-3 mt-2">
-                      <i class="bi bi-briefcase bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"></i>
-                    </div>
-                    <div class="right-card text-shadow-none">
-                      <h1 class="text-lg font-semibold mb-5">
-                        Career History
-                      </h1>
-                      <ul>
-                        <div class="mb-2">
-                          <li class="font-semibold"><p>Full-Stack Engineer Intern - <span class="text-violet-800">Arplans</span></p></li>
-                          <li class="text-sm text-slate-500 font-semibold">Dec. 2025 - Present</li>
-                        </div>
-                        <div class="mb-2">
-                          <li class="font-semibold"><p>Lab Consultant - <span class="text-red-800">Temple University</span></p></li>
-                          <li class="text-sm text-slate-500 font-semibold">Aug. 2025 - present</li>
-                        </div>
-                        <div class="mb-2">
-                          <li class="font-semibold"><p>Software Engineer Extern - <span class="text-sky-500">Sightly</span></p></li>
-                          <li class="text-sm text-slate-500 font-semibold">Aug. 2023 - Jul. 2023</li>
-                        </div>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /Career Container (Mobile) -->
-      
-          </div>
-          <!-- /background-container -->
-      
+          <h1 class="text-md mb-2 font-light text-blue-500 uppercase tracking-wide">PORTFOLIO</h1>
+          <h3 class="text-4xl font-semibold mb-3 font-['Lexend_Deca']">
+            Experience<span class="text-blue-500">.</span>
+          </h3>
+
+          <div
+            id="experience-timeline"
+            class="experience-timeline mt-10 flex w-full max-w-3xl flex-col gap-6 mx-auto"
+          ></div>
         </div>
       </section>
 
-      <section id="contact-section" class="pt-15 lg:pt-7 md:pb-30">
-        <div class="flex flex-col p-[60px] m justify-center items-center">
-          <h1 class="text-md mb-2 font-light text-blue-500">CONTACT.</h1>
-          <h3 class="text-4xl font-semibold">Get In Touch</h3>
+      <section id="contact-section" class="pt-15 lg:pt-7 pb-50">
+        <div class="p-[60px]">
+          <div class="contact-container flex flex-col lg:flex-row gap-12 lg:gap-20 w-full max-w-6xl mx-auto">
+            <div class="left-contact flex-1 lg:max-w-md">
+              <h1 class="text-md mb-2 font-light text-blue-500 uppercase tracking-wide">CONTACT</h1>
+              <h3 class="text-4xl font-semibold mb-4 font-['Lexend_Deca']">
+                Get In Touch<span class="text-blue-500">.</span>
+              </h3>
+              <p class="text-slate-500 text-base font-light leading-relaxed mb-10">
+                I'm always open to discussing new projects, creative ideas, or opportunities to be part of something great.
+              </p>
 
-          <div class="conact-contianer flex flex-col md:flex-row md:mt-10 -mt-8">
-            <div class="left-contact p-[50px] max-md:ml-5">
-
-              <div class="info-card w-xs flex flex-row border-1 border-slate-300/80 rounded-md bg-white p-5 mb-6"> 
-                <div class="mt-1 ">
-                  <i class="bi bi-envelope bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"></i>
-
+              <div class="flex flex-row items-start gap-4 mb-8">
+                <a
+                  href="mailto:mxbalogun@gmail.com"
+                  class="icon-chip"
+                  aria-label="Send email to mxbalogun@gmail.com"
+                >
+                  <i class="bi bi-envelope"></i>
+                </a>
+                <div>
+                  <p class="text-xs uppercase tracking-wide text-slate-400 font-medium mb-1">Email</p>
+                  <a
+                    href="mailto:mxbalogun@gmail.com"
+                    class="text-lg font-semibold text-slate-900 inline-flex items-center gap-1.5 hover:text-blue-500 transition-colors"
+                  >
+                    mxbalogun@gmail.com
+                    <i class="bi bi-box-arrow-up-right text-sm text-slate-400"></i>
+                  </a>
                 </div>
-                <div class="ml-4"><h3 class="text-sm text-slate-500 font-semibold">Email</h3>
-                <h1>mxbalogun@gmail.com</h1></div>
               </div>
-              
-              <div class="info-card w-xs flex flex-row border-1 border-slate-300/80 rounded-md bg-white p-5"> 
-                <div class="mt-1">
-                  <i class="bi bi-geo-alt bg-blue-500/20 text-2xl rounded-lg p-2 text-blue-500 text-shadow-lg"></i>
-                </div>
-                <div class="ml-4">
-                  <h3 class="text-sm text-slate-500 font-semibold">New York</h3>
-                  <h1>New York City</h1>
+
+              <div class="flex flex-row items-start gap-4">
+                <span class="icon-chip" aria-hidden="true">
+                  <i class="bi bi-geo-alt"></i>
+                </span>
+                <div>
+                  <p class="text-xs uppercase tracking-wide text-slate-400 font-medium mb-1">Location</p>
+                  <p class="text-lg font-semibold text-slate-900">New York City</p>
                 </div>
               </div>
             </div>
-            <div class="right-contact bg-white w-full max-w-[500px] md:max-w-[500px] border-1 border-slate-300 rounded-lg">
-              <form action="https://formspree.io/f/xlgeqala"
-              method="POST" class="flex flex-col p-8">
-                <div class="flex flex-row justify-between mb-3">
-                  <div class="flex flex-col mr-4 text-md "><label for="name" class="font-semibold">Name</label>
-                    <input type="text" id="name" name="inquirer" class="border 1 border-slate-300 p-1 rounded-lg bg-slate-50" placeholder="Your name...">
+
+            <div class="right-contact flex-1 w-full lg:max-w-lg lg:mt-28">
+              <form
+                action="https://formspree.io/f/xlgeqala"
+                method="POST"
+                class="flex flex-col gap-5"
+              >
+                <div class="flex flex-col sm:flex-row gap-5">
+                  <div class="flex flex-1 flex-col gap-1.5">
+                    <label for="contact-name" class="text-xs uppercase tracking-wide text-slate-400 font-medium">Name</label>
+                    <input
+                      type="text"
+                      id="contact-name"
+                      name="inquirer"
+                      class="w-full rounded-xl bg-white px-4 py-2.5 text-slate-900 placeholder:text-slate-400 border-0 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05),0_2px_4px_-1px_rgba(0,0,0,0.03)] focus:outline-none focus:ring-2 focus:ring-blue-500/30"
+                      placeholder="Your name"
+                    />
                   </div>
-                  
-                  <div class="flex flex-col text-md"><label for="name" class="font-semibold">Email</label>
-                    <input type="email" id="email" name="email" class="border 1 border-slate-300 p-1 rounded-lg bg-slate-50" placeholder="Your email...">
+
+                  <div class="flex flex-1 flex-col gap-1.5">
+                    <label for="contact-email" class="text-xs uppercase tracking-wide text-slate-400 font-medium">Email</label>
+                    <input
+                      type="email"
+                      id="contact-email"
+                      name="email"
+                      class="w-full rounded-xl bg-white px-4 py-2.5 text-slate-900 placeholder:text-slate-400 border-0 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05),0_2px_4px_-1px_rgba(0,0,0,0.03)] focus:outline-none focus:ring-2 focus:ring-blue-500/30"
+                      placeholder="your@email.com"
+                    />
                   </div>
                 </div>
 
-                <div class="flex flex-col text-md">
-                  <label for="message" class="font-semibold">Message</label>
-                  <textarea class="resize-y rounded-md border-1 border-slate-300 h-20 mb-4 p-1 bg-slate-50" name="text" placeholder="Your message..."></textarea>
-
-                  <button type="submit"
-              class="text-shadow-lg bg-blue-500 rounded-xl text-lg pt-[5px] pb-[6px] pl-[30px] pr-[30px] font-light mr-[15px] hover:cursor-pointer text-white w-48">Send Message</button>
+                <div class="flex flex-col gap-1.5">
+                  <label for="contact-message" class="text-xs uppercase tracking-wide text-slate-400 font-medium">Message</label>
+                  <textarea
+                    id="contact-message"
+                    name="text"
+                    rows="5"
+                    class="w-full resize-y rounded-xl bg-white px-4 py-2.5 text-slate-900 placeholder:text-slate-400 border-0 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05),0_2px_4px_-1px_rgba(0,0,0,0.03)] focus:outline-none focus:ring-2 focus:ring-blue-500/30"
+                    placeholder="Tell me about your project..."
+                  ></textarea>
                 </div>
 
+                <button
+                  type="submit"
+                  class="inline-flex w-fit items-center gap-2 rounded-full bg-blue-500 px-6 py-2.5 text-base font-medium text-white hover:bg-blue-600 transition-colors cursor-pointer"
+                >
+                  Send Message
+                  <i class="bi bi-send-fill text-sm"></i>
+                </button>
               </form>
-                
-
             </div>
           </div>
-
         </div>
       </section>
   </main>
 
-    <footer>
-      <div class="footer-container p-6 bg-white border-t-2 border-slate-300 flex flex-row justify-between text-slate-500 text-shadow-md">
-        <div class="footer-left">
-          <i class="bi bi-c-circle text-md inline font-semibold"></i>
-          <h3 class="text-lg inline">Mike Balogun. All Rights Reserved.</h3>
+    <footer class="border-t border-slate-200/60 bg-slate-100">
+      <div
+        class="footer-container mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-6 px-[60px] py-10 sm:flex-row sm:items-center"
+      >
+        <div class="text-center sm:text-left">
+          <p class="font-['Lexend_Deca'] text-lg font-semibold text-slate-900">
+            Mike Balogun<span class="text-blue-500">.</span>
+          </p>
+          <p class="mt-1 text-sm font-light text-slate-500">
+            &copy; <span id="footer-year"></span> All rights reserved.
+          </p>
         </div>
-        <div class="footer-right text-xl">
-          <a href="https://www.linkedin.com/in/mike-balogun/" target="_blank">
-            <i class="bi bi-linkedin mr-4"></i>
+
+        <div class="footer-social flex items-center gap-3">
+          <a
+            href="https://www.linkedin.com/in/mike-balogun/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile"
+            class="icon-chip"
+          >
+            <i class="bi bi-linkedin"></i>
           </a>
-          <a href="https://github.com/mikexbal" target="_blank">
+          <a
+            href="https://github.com/mikexbal"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub profile"
+            class="icon-chip"
+          >
             <i class="bi bi-github"></i>
           </a>
         </div>

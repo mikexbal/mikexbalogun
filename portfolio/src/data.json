@@ -24,11 +24,34 @@
         }
     ],
 
-    "career": [
+    "careers": [
         {
-            "title": "",
-            "company": "",
-            "timeline": ""
+            "type": "work",
+            "title": "Full-Stack Engineer Intern",
+            "organization": "Arplans",
+            "timeline": "Dec 2025 – Present",
+            "desc": ""
+        },
+        {
+            "type": "work",
+            "title": "Lab Consultant",
+            "organization": "Temple University",
+            "timeline": "Aug 2025 – Present",
+            "desc": ""
+        },
+        {
+            "type": "education",
+            "title": "B.S. Information Science and Technology",
+            "organization": "Temple University",
+            "timeline": "May 2026",
+            "desc": "Foundation in programming, databases, networking, and cloud computing."
+        },
+        {
+            "type": "work",
+            "title": "Software Engineer Shadow",
+            "organization": "Sightly",
+            "timeline": "Jul 2023 – Aug 2023",
+            "desc": ""
         }
     ]
 
