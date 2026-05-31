@@ -33,6 +33,13 @@
             "desc": "Developing an AI agent system that automates clinical workflows to improve provider efficiency and follow-up care."
         },
         {
+            "type": "education",
+            "title": "B.S. Information Science and Technology",
+            "organization": "Temple University",
+            "timeline": "May 2026",
+            "desc": "Foundation in programming, databases, networking, and cloud computing."
+        },
+        {
             "type": "work",
             "title": "Full-Stack Engineer Intern",
             "organization": "Arplans",
@@ -45,13 +52,6 @@
             "organization": "Temple University",
             "timeline": "Aug 2025 – May 2026",
             "desc": "Supported students and faculty with technical troubleshooting, software/hardware assistance, and lab operations to maintain a reliable computing environment."
-        },
-        {
-            "type": "education",
-            "title": "B.S. Information Science and Technology",
-            "organization": "Temple University",
-            "timeline": "May 2026",
-            "desc": "Foundation in programming, databases, networking, and cloud computing."
         },
         {
             "type": "work",
