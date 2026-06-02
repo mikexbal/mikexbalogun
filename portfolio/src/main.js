@@ -43,65 +43,85 @@ function initNavMenu() {
   });
 }
 
-function loadProjects(){
+function loadProjects() {
   const projectContainer = document.getElementById("project-container");
 
   data.projects.forEach((project, index) => {
     const projectNumber = String(index + 1).padStart(2, "0");
-    const projectCard = document.createElement("div");
+    const row = document.createElement("article");
+    row.className =
+      "project-row group grid grid-cols-1 gap-6 border-b border-slate-200 py-10 last:border-b-0 md:grid-cols-[3.5rem_1fr] md:gap-x-8 lg:grid-cols-[3.5rem_1fr_minmax(14rem,auto)] lg:gap-x-12";
 
-    projectCard.className =
-      "rounded-xl bg-white border border-slate-200/90 shadow-sm p-6 flex flex-col";
-    projectCard.innerHTML = `
-      <span class="text-blue-400 text-xs font-normal mb-3">${projectNumber}</span>
-      <h1 class="text-xl font-bold text-slate-900 mb-2">${project.title}</h1>
-      <p class="text-slate-500 text-sm leading-relaxed font-light mb-5 flex-grow">${project.desc}</p>`;
+    const indexEl = document.createElement("span");
+    indexEl.className =
+      "project-index font-['Funnel_Sans'] text-sm font-light text-slate-400 lg:pt-1";
+    indexEl.textContent = projectNumber;
+
+    const mainCol = document.createElement("div");
+    mainCol.className = "project-main min-w-0";
+
+    const title = document.createElement("h2");
+    title.className =
+      "project-title font-['Lexend_Deca'] text-2xl font-bold text-slate-900 transition-colors duration-500 ease-in-out group-hover:text-blue-500 md:text-3xl lg:text-4xl";
+    title.textContent = project.title;
+
+    const desc = document.createElement("p");
+    desc.className =
+      "mt-3 font-['Funnel_Sans'] text-base font-light leading-relaxed text-slate-600 md:text-lg";
+    desc.textContent = project.desc;
+
+    mainCol.appendChild(title);
+    mainCol.appendChild(desc);
+
+    const asideCol = document.createElement("div");
+    asideCol.className =
+      "project-aside flex flex-col gap-5 md:col-span-2 lg:col-span-1 lg:col-start-3 lg:items-end lg:pt-1";
 
     const techContainer = document.createElement("div");
-    techContainer.className = "technologies-container flex flex-wrap gap-2";
+    techContainer.className = "flex flex-wrap gap-2 lg:justify-end";
 
     project.tech.forEach((item) => {
       const tech = document.createElement("span");
       tech.className =
-        "inline-flex items-center rounded-full bg-slate-50 border border-slate-200 px-2.5 py-1 text-xs font-medium text-blue-500";
-      tech.innerText = item;
+        "inline-flex items-center rounded-md bg-white px-2.5 py-1 font-['Funnel_Sans'] text-[0.65rem] font-medium uppercase tracking-wide text-slate-900 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05),0_2px_4px_-1px_rgba(0,0,0,0.03)]";
+      tech.textContent = item;
       techContainer.appendChild(tech);
     });
 
-    projectCard.appendChild(techContainer);
+    asideCol.appendChild(techContainer);
 
-    const linkContainer = document.createElement("div");
-    linkContainer.className = "link-container flex flex-row mt-3 text-base text-slate-400";
+    if (project.github.length > 0) {
+      const repoLink = document.createElement("a");
+      repoLink.href = project.github;
+      repoLink.target = "_blank";
+      repoLink.rel = "noopener noreferrer";
+      repoLink.className =
+        "inline-flex items-center gap-2 font-['Funnel_Sans'] text-xs font-semibold uppercase tracking-wide text-slate-900 transition-colors hover:text-blue-500";
+      repoLink.innerHTML = `
+        <i class="bi bi-github text-sm" aria-hidden="true"></i>
+        <span>View Repository</span>
+        <i class="bi bi-arrow-right text-sm" aria-hidden="true"></i>`;
+      asideCol.appendChild(repoLink);
+    }
 
     if (project.live.length > 0) {
       const liveLink = document.createElement("a");
-      liveLink.target = "_blank";
       liveLink.href = project.live;
-
-      const liveIcon = document.createElement("i");
-      liveIcon.className = "bi bi-box-arrow-up-right mr-4";
-
-      liveLink.appendChild(liveIcon);
-      linkContainer.appendChild(liveLink);
+      liveLink.target = "_blank";
+      liveLink.rel = "noopener noreferrer";
+      liveLink.className =
+        "inline-flex items-center gap-2 font-['Funnel_Sans'] text-xs font-semibold uppercase tracking-wide text-slate-900 transition-colors hover:text-blue-500";
+      liveLink.innerHTML = `
+        <i class="bi bi-box-arrow-up-right text-sm" aria-hidden="true"></i>
+        <span>View Live</span>
+        <i class="bi bi-arrow-right text-sm" aria-hidden="true"></i>`;
+      asideCol.appendChild(liveLink);
     }
 
-    if (project.github.length > 0) {
-      const gitLink = document.createElement("a");
-      gitLink.target = "_blank";
-      gitLink.href = project.github;
-
-      const gitIcon = document.createElement("i");
-      gitIcon.className = "bi bi-github";
-
-      gitLink.appendChild(gitIcon);
-      linkContainer.appendChild(gitLink);
-    }
-
-    if (linkContainer.childElementCount > 0) {
-      projectCard.appendChild(linkContainer);
-    }
-
-    projectContainer.appendChild(projectCard);
+    row.appendChild(indexEl);
+    row.appendChild(mainCol);
+    row.appendChild(asideCol);
+    projectContainer.appendChild(row);
   });
 }
 

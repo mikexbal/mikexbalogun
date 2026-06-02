@@ -37,3 +37,7 @@ a.icon-chip:hover {
     @apply bg-blue-500 text-white;
 }
 
+.project-list .project-row:first-child {
+    padding-top: 0;
+}
+
