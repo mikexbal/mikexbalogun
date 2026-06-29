@@ -1,237 +1,168 @@
-import './style.css'
+import './style.css';
 import data from './data.json';
 
+// ── Footer year ──────────────────────────────────────────────────────────────
+document.getElementById('footer-year').textContent = new Date().getFullYear();
 
-function loadName(){
-  let name = document.getElementById("name")
-  name.innerText = data['basic-info'].name
-}
-
-function loadFooterYear() {
-  const yearEl = document.getElementById("footer-year");
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
-}
-
-loadName();
-loadFooterYear();
-initNavMenu();
-
-function initNavMenu() {
-  const navbar = document.getElementById("navbar");
-  const toggle = document.getElementById("nav-toggle");
-  const mobilePanel = document.getElementById("nav-menu-mobile");
-  const mobileLinks = document.querySelectorAll(".nav-mobile-link");
-
-  if (!navbar || !toggle || !mobilePanel) return;
-
-  const setMenuOpen = (open) => {
-    navbar.classList.toggle("is-open", open);
-    toggle.setAttribute("aria-expanded", String(open));
-    document.body.classList.toggle("nav-menu-open", open);
-  };
-
-  toggle.addEventListener("click", () => {
-    setMenuOpen(!navbar.classList.contains("is-open"));
-  });
-
-  mobileLinks.forEach((link) => {
-    link.addEventListener("click", () => setMenuOpen(false));
-  });
-
-  window.addEventListener("resize", () => {
-    if (window.innerWidth >= 1024) setMenuOpen(false);
+// ── Skills ───────────────────────────────────────────────────────────────────
+function loadSkills() {
+  const grid = document.getElementById('skills-grid');
+  (data.skills || []).forEach(skill => {
+    const card = document.createElement('div');
+    card.className = 'skill-card';
+    card.setAttribute('data-reveal', '');
+    card.setAttribute('data-reveal-stagger', '');
+    card.style.cssText = 'background: #f6f2ea; border: 1px solid rgba(26,24,19,0.1); border-radius: 12px; padding: 28px;';
+    card.innerHTML = `
+      <div style="font-size: 22px; margin-bottom: 18px;">${skill.icon}</div>
+      <h3 style="margin: 0 0 10px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em;">${skill.title}</h3>
+      <p style="margin: 0; font-size: 14px; line-height: 1.55; color: #6b665a;">${skill.items}</p>
+    `;
+    grid.appendChild(card);
   });
 }
 
+// ── Projects ─────────────────────────────────────────────────────────────────
 function loadProjects() {
-  const projectContainer = document.getElementById("project-container");
+  const grid = document.getElementById('projects-grid');
+  (data.projects || []).forEach(project => {
+    const href = project.github || project.live || '#';
+    const card = document.createElement('a');
+    card.className = 'project-card';
+    card.href = href;
+    if (href !== '#') { card.target = '_blank'; card.rel = 'noopener'; }
+    card.setAttribute('data-reveal', '');
+    card.setAttribute('data-reveal-stagger', '');
+    card.style.cssText = 'display: flex; flex-direction: column; border-radius: 16px; overflow: hidden; background: #f6f2ea; border: 1px solid rgba(26,24,19,0.1); text-decoration: none; color: inherit;';
 
-  data.projects.forEach((project, index) => {
-    const projectNumber = String(index + 1).padStart(2, "0");
-    const row = document.createElement("article");
-    row.className =
-      "project-row group grid grid-cols-1 gap-6 border-b border-slate-200 py-10 last:border-b-0 md:grid-cols-[3.5rem_1fr] md:gap-x-8 lg:grid-cols-[3.5rem_1fr_minmax(14rem,auto)] lg:gap-x-12";
+    const tags = (project.tech || []).map(t =>
+      `<span style="font-family: ui-monospace,'SF Mono',Menlo,monospace; font-size: 12px; color: #6b665a; border: 1px solid rgba(26,24,19,0.16); padding: 4px 10px; border-radius: 980px;">${t}</span>`
+    ).join('');
 
-    const indexEl = document.createElement("span");
-    indexEl.className =
-      "project-index font-['Funnel_Sans'] text-sm font-light text-slate-400 lg:pt-1";
-    indexEl.textContent = projectNumber;
+    const shotLabel = project.title.toLowerCase().replace(/\s+/g, '-') + '.png';
+    
 
-    const mainCol = document.createElement("div");
-    mainCol.className = "project-main min-w-0";
+    const linkLabel = project.github ? 'View on GitHub' : project.live ? 'View Live' : '';
+    const linkHtml = linkLabel
+      ? `<span style="margin-top: auto; display: inline-flex; align-items: center; gap: 7px; font-size: 14px; font-weight: 500; color: #2f2dd0;">${linkLabel} <span style="font-size: 16px;">&#8599;</span></span>`
+      : '';
 
-    const title = document.createElement("h2");
-    title.className =
-      "project-title font-['Lexend_Deca'] text-2xl font-bold text-slate-900 transition-colors duration-500 ease-in-out group-hover:text-blue-500 md:text-3xl lg:text-4xl";
-    title.textContent = project.title;
-
-    const desc = document.createElement("p");
-    desc.className =
-      "mt-3 font-['Funnel_Sans'] text-base font-light leading-relaxed text-slate-600 md:text-lg";
-    desc.textContent = project.desc;
-
-    mainCol.appendChild(title);
-    mainCol.appendChild(desc);
-
-    const asideCol = document.createElement("div");
-    asideCol.className =
-      "project-aside flex flex-col gap-5 md:col-span-2 lg:col-span-1 lg:col-start-3 lg:items-end lg:pt-1";
-
-    const techContainer = document.createElement("div");
-    techContainer.className = "flex flex-wrap gap-2 lg:justify-end";
-
-    project.tech.forEach((item) => {
-      const tech = document.createElement("span");
-      tech.className =
-        "inline-flex items-center rounded-md bg-white px-2.5 py-1 font-['Funnel_Sans'] text-[0.65rem] font-medium uppercase tracking-wide text-slate-900 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05),0_2px_4px_-1px_rgba(0,0,0,0.03)]";
-      tech.textContent = item;
-      techContainer.appendChild(tech);
-    });
-
-    asideCol.appendChild(techContainer);
-
-    if (project.github.length > 0) {
-      const repoLink = document.createElement("a");
-      repoLink.href = project.github;
-      repoLink.target = "_blank";
-      repoLink.rel = "noopener noreferrer";
-      repoLink.className =
-        "inline-flex items-center gap-2 font-['Funnel_Sans'] text-xs font-semibold uppercase tracking-wide text-slate-900 transition-colors hover:text-blue-500";
-      repoLink.innerHTML = `
-        <i class="bi bi-github text-sm" aria-hidden="true"></i>
-        <span>View Repository</span>
-        <i class="bi bi-arrow-right text-sm" aria-hidden="true"></i>`;
-      asideCol.appendChild(repoLink);
-    }
-
-    if (project.live.length > 0) {
-      const liveLink = document.createElement("a");
-      liveLink.href = project.live;
-      liveLink.target = "_blank";
-      liveLink.rel = "noopener noreferrer";
-      liveLink.className =
-        "inline-flex items-center gap-2 font-['Funnel_Sans'] text-xs font-semibold uppercase tracking-wide text-slate-900 transition-colors hover:text-blue-500";
-      liveLink.innerHTML = `
-        <i class="bi bi-box-arrow-up-right text-sm" aria-hidden="true"></i>
-        <span>View Live</span>
-        <i class="bi bi-arrow-right text-sm" aria-hidden="true"></i>`;
-      asideCol.appendChild(liveLink);
-    }
-
-    row.appendChild(indexEl);
-    row.appendChild(mainCol);
-    row.appendChild(asideCol);
-    projectContainer.appendChild(row);
-  });
-}
-
-loadProjects();
-
-const CAREER_ICONS = {
-  work: "bi-briefcase",
-  education: "bi-mortarboard",
-};
-
-function loadExperience() {
-  const timeline = document.getElementById("experience-timeline");
-  const careers = data.careers ?? [];
-
-  careers.forEach((entry, index) => {
-    const isLast = index === careers.length - 1;
-    const iconClass = CAREER_ICONS[entry.type] ?? CAREER_ICONS.work;
-
-    const row = document.createElement("div");
-    row.className = "timeline-row flex gap-5 items-stretch";
-
-    const axis = document.createElement("div");
-    axis.className = "timeline-axis relative w-9 shrink-0 self-stretch";
-
-    const icon = document.createElement("div");
-    icon.className =
-      "timeline-icon absolute top-6 left-1/2 z-10 flex h-9 w-9 -translate-x-1/2 items-center justify-center rounded-lg border border-slate-200 bg-slate-50";
-    icon.innerHTML = `<i class="bi ${iconClass} text-blue-500 text-base"></i>`;
-    axis.appendChild(icon);
-
-    if (!isLast) {
-      const connector = document.createElement("div");
-      connector.className =
-        "timeline-connector absolute left-1/2 top-[2.625rem] -bottom-[4.125rem] w-px -translate-x-1/2 bg-slate-300";
-      connector.setAttribute("aria-hidden", "true");
-      axis.appendChild(connector);
-    }
-
-    const card = document.createElement("div");
-    card.className =
-      "experience-card flex-1 rounded-2xl bg-white border border-slate-200/90 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05),0_2px_4px_-1px_rgba(0,0,0,0.03)] p-6";
-
-    const header = document.createElement("div");
-    header.className =
-      "flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-4";
-    header.innerHTML = `
-      <div>
-        <h3 class="text-lg font-semibold text-slate-900">${entry.title}</h3>
-        <p class="text-slate-500 font-light">${entry.organization}</p>
+    card.innerHTML = `
+      <div style="aspect-ratio: 16/8; background-color: #e8e3d6; background-image: repeating-linear-gradient(135deg, rgba(47,45,208,0.06) 0 14px, transparent 14px 28px); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(26,24,19,0.08);">
+        <span style="font-family: ui-monospace,'SF Mono',Menlo,monospace; font-size: 11px; color: #8a8475; letter-spacing: 0.04em;">${shotLabel}</span>
       </div>
-      <p class="text-slate-500 text-sm font-light shrink-0 sm:text-right">${entry.timeline}</p>`;
-    card.appendChild(header);
-
-    if (entry.desc?.length > 0) {
-      const descBlock = document.createElement("div");
-      descBlock.className = "mt-4 border-t border-slate-200 pt-4";
-      descBlock.innerHTML = `<p class="text-slate-500 text-sm font-light leading-relaxed">${entry.desc}</p>`;
-      card.appendChild(descBlock);
-    }
-
-    row.appendChild(axis);
-    row.appendChild(card);
-    timeline.appendChild(row);
+      <div style="padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 8px;">
+          <h3 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 22px; line-height: 1.1; letter-spacing: -0.01em;">${project.title}</h3>
+        </div>
+        <p style="margin: 0 0 14px; font-size: 13px; line-height: 1.55; color: #5a554a;">${project.desc}</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px;">${tags}</div>
+        ${linkHtml}
+      </div>
+    `;
+    grid.appendChild(card);
   });
 }
 
+// ── Experience ────────────────────────────────────────────────────────────────
+function loadExperience() {
+  const list = document.getElementById('experience-list');
+  (data.careers || []).forEach(entry => {
+    const row = document.createElement('div');
+    row.className = 'exp-row';
+    row.setAttribute('data-reveal', '');
+    row.style.cssText = 'display: grid; grid-template-columns: max-content 1fr; gap: 28px; padding: 30px 0; border-top: 1px solid rgba(26,24,19,0.14);';
+    row.innerHTML = `
+      <div style="font-family: ui-monospace,'SF Mono',Menlo,monospace; font-size: 13px; color: #8a8475; padding-top: 5px; white-space: nowrap;">${entry.timeline}</div>
+      <div>
+        <h3 style="margin: 0 0 4px; font-size: 21px; font-weight: 600; letter-spacing: -0.01em;">${entry.title}</h3>
+        <div style="font-size: 15px; font-weight: 500; color: #2f2dd0; margin-bottom: 10px;">${entry.organization}</div>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #5a554a;">${entry.desc}</p>
+      </div>
+    `;
+    list.appendChild(row);
+  });
+}
+
+// Populate all sections before initialising observers
+loadSkills();
+loadProjects();
 loadExperience();
 
-// async function loadData () {
-//   try {
-//     const res = await fetch('./data.json');
-//     const data = await res.json();
+// ── Scroll reveal ─────────────────────────────────────────────────────────────
+function initReveal() {
+  const els = Array.from(document.querySelectorAll('[data-reveal]'));
+  els.forEach(el => {
+    const dur = el.getAttribute('data-reveal-dur') || 900;
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(34px)';
+    el.style.transition = `opacity ${dur}ms cubic-bezier(0.16,1,0.3,1), transform ${dur}ms cubic-bezier(0.16,1,0.3,1)`;
+    el.style.willChange = 'opacity, transform';
+  });
 
-//     console.log(data);
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      let delay = parseInt(e.target.getAttribute('data-reveal-delay') || '0', 10);
+      if (e.target.hasAttribute('data-reveal-stagger')) {
+        const sibs = Array.from(e.target.parentElement.children).filter(c => c.hasAttribute('data-reveal-stagger'));
+        delay += sibs.indexOf(e.target) * 110;
+      }
+      e.target.style.transitionDelay = delay + 'ms';
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'none';
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
 
-//     let projectContainer = getElementById("project-container");
+  els.forEach(el => io.observe(el));
+}
 
-//     data.projects.forEach(project => {
-//       let div = document.createElement('div');
-//       div.className = 'project-card';
-//       div.innerHTML = 
-//       `<div class="border-1 border-slate-300/80 rounded-md bg-white max-w-[800px] min-h-48 p-[20px] text-shadow-xs">
-//                 <h1 class="text-xl font-semibold mb-1">${project.title}</h1>
-//                 <p class="mb-2 text-slate-500 text-lg font-light">${project.desc}</p>
-//                 <div class="technologies-container">
-//                   <span
-//                     class="inline-flex items-center rounded-full bg-blue-500/10 px-2 py-1 text-xs font-medium text-blue-500"
-//                     >Badge</span
-//                   >
-//                 </div>
-//                 <div class="link-container flex flex-row mt-3 text-xl">
-//                   <a href=""><i class="bi bi-box-arrow-up-right mr-4"></i></a>
+// ── Parallax ──────────────────────────────────────────────────────────────────
+function initParallax() {
+  const blob = document.getElementById('parallax-blob');
+  const drifts = Array.from(document.querySelectorAll('[data-parallax-y]'));
 
-//                   <a href=""><i class="bi bi-github"></i></a>
-//                 </div>
-//               </div>`
-//     })
+  const onScroll = () => {
+    const y = window.scrollY || window.pageYOffset;
+    if (blob) blob.style.transform = `translateY(${(y * 0.22).toFixed(1)}px)`;
+    const vh = window.innerHeight || 800;
+    drifts.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const speed = parseFloat(el.getAttribute('data-parallax-y')) || 0;
+      const progress = (rect.top + rect.height / 2 - vh / 2) / vh;
+      el.style.translate = `0 ${(progress * speed).toFixed(1)}px`;
+    });
+  };
 
-//     projectContainer.appendChild(div);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
 
+// ── Contact form ──────────────────────────────────────────────────────────────
+function initContactForm() {
+  const form = document.getElementById('contact-form');
+  const success = document.getElementById('form-success');
 
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        success.style.display = 'flex';
+      }
+    } catch {
+      form.style.display = 'none';
+      success.style.display = 'flex';
+    }
+  });
+}
 
-// loadData();
-
-
-
-  
-
-
+initReveal();
+initParallax();
+initContactForm();

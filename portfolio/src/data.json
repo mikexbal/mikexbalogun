@@ -3,8 +3,14 @@
         "job-title": "Software Engineer",
         "name": "Mike",
         "desc": ""
-        
-    }, 
+    },
+
+    "skills": [
+        { "icon": "💡", "title": "Frontend", "items": "React, Next.js, TypeScript, Angular, HTML & CSS" },
+        { "icon": "🔌", "title": "Backend", "items": ".NET, C#, Python, Node.js" },
+        { "icon": "🖨️", "title": "Data", "items": "PostgreSQL, MongoDB, SQL" },
+        { "icon": "☁️", "title": "Cloud & Tools", "items": "Git, GitHub, Docker, Claude Code" }
+    ],
 
     "projects": [
         {
@@ -14,7 +20,6 @@
             "live": "",
             "github": "https://github.com/mikexbal/Car-Rental-Program"
         },
-
         {
             "title": "Weather App",
             "desc": "Web application that allows users to search real-time weather conditions by city, leveraging a React frontend and a Python Flask backend integrated with third-party geolocation and weather APIs.",
@@ -29,38 +34,29 @@
             "type": "work",
             "title": "GI Software Engineering Intern",
             "organization": "ModMed",
-            "timeline": "May 2026 - Present",
-            "desc": "Developing an AI agent system that automates clinical workflows to improve provider efficiency and follow-up care."
-        },
-        {
-            "type": "education",
-            "title": "B.S. Information Science and Technology",
-            "organization": "Temple University",
-            "timeline": "May 2026",
-            "desc": "Foundation in programming, databases, networking, and cloud computing."
+            "timeline": "May 2026 — Present",
+            "desc": "Developing software to automate clinical workflows."
         },
         {
             "type": "work",
-            "title": "Full-Stack Engineer Intern",
+            "title": "Full-Stack Engineering Intern",
             "organization": "Arplans",
-            "timeline": "Dec 2025 – May 2026",
-            "desc": "Developed and deployed full-stack web features using Next.js, React, Node.js, and MongoDB in an agile team environment."
+            "timeline": "Dec 2025 — May 2026",
+            "desc": "Developed and implemented features to improve user experience & workflow efficiency."
         },
         {
             "type": "work",
             "title": "Lab Consultant",
             "organization": "Temple University",
-            "timeline": "Aug 2025 – May 2026",
-            "desc": "Supported students and faculty with technical troubleshooting, software/hardware assistance, and lab operations to maintain a reliable computing environment."
+            "timeline": "Aug 2025 — May 2026",
+            "desc": "Supported students and faculty to improve campus technology experiences through IT support."
         },
         {
             "type": "work",
             "title": "Software Engineer Shadow",
             "organization": "Sightly",
-            "timeline": "Jul 2023 – Aug 2023",
-            "desc": "Shadowed software engineers to gain insights into software development and gain hands-on experience with real-world projects."
+            "timeline": "Jul 2023 — Aug 2023",
+            "desc": "Shadowed software engineers to gain hands-on exposure to software engineering"
         }
     ]
-
-
 }
